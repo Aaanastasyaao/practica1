@@ -12,12 +12,19 @@ namespace Practica1
         public string Nickname { get; set; }
         public string Breed { get; set; }
         public float Age { get; set; }
+        public Check(string nickname, string breed, float age)
+        {
+            Nickname = nickname;
+            Breed = breed;
+            Age = age;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
             // Создаем экземпляр класса Check с помощью конструктора с параметрами
-            Check check = new Check();
+            Check check = new Check("Бобик", "Доберман", 10.4f);
 
             // Выводим информацию о чеке
             Console.WriteLine("Nickname: " + check.Nickname);
